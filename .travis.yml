@@ -1,6 +1,6 @@
 sudo: true
 dist: trusty
-install: false 
+install: true 
 
 jobs:
   include:
