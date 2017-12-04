@@ -1,0 +1,11 @@
+sudo: true
+dist: trusty
+install: false 
+
+jobs:
+  include:
+    - stage: build docker image
+      script:
+      - docker build -t microsoft/terraform . 
+      - docker run --rm microsoft/terraform "rake"
+    
