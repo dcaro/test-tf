@@ -13,4 +13,4 @@ RUN apt-get update && apt-get install unzip \
 
 #ENTRYPOINT [ "/tf-test/docker-entrypoint.sh" ]
 #CMD ["--help"]
-CMD [ "" ]
+CMD [ "/bin/bash" ]
