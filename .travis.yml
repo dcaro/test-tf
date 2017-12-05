@@ -6,7 +6,6 @@ jobs:
   include:
     - stage: build docker image
       script:
-      - docker build -t microsoft/terraform . 
-      - pwd
-      - docker run --rm microsoft/terraform "rake" 
+      - docker build -t microsoft/terraform .
+      - docker run --rm microsoft/terraform -v $PWD/logs:/tf-test/.kitchen -it tf-test-container
  
