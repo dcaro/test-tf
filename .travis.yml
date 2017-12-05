@@ -7,5 +7,6 @@ jobs:
     - stage: build docker image
       script:
       - docker build -t microsoft/terraform . 
-      - docker run --rm microsoft/terraform "rake"
-    
+      - pwd
+      - docker run --rm microsoft/terraform "rake" 
+ 
